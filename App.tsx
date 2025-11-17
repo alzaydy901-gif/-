@@ -5,13 +5,13 @@ import { AppProvider } from './contexts/AppContext';
 import PortfolioPage from './pages/PortfolioPage';
 import LoginPage from './pages/LoginPage';
 import AdminDashboardPage from './pages/AdminDashboardPage';
-import WaterEffect from './components/WaterEffect';
+import CosmicBackground from './components/CosmicBackground';
 
 function App() {
   return (
     <AppProvider>
       <div className="relative min-h-screen bg-black text-white overflow-x-hidden">
-        <WaterEffect />
+        <CosmicBackground />
         <div className="relative z-10">
           <HashRouter>
             <Routes>

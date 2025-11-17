@@ -21,14 +21,22 @@ export interface Achievement {
 
 export interface Skill {
   name: string;
-  // FIX: Use ComponentType from react instead of React.ComponentType.
-  icon: ComponentType<{ className?: string }>;
+  iconName: string;
+  icon?: ComponentType<{ className?: string; size?: number }>;
 }
 
 export interface Hobby {
     name: string;
-    // FIX: Use ComponentType from react instead of React.ComponentType.
-    icon: ComponentType<{ className?: string }>;
+    iconName: string;
+    icon?: ComponentType<{ className?: string; size?: number }>;
+}
+
+export interface TeacherComment {
+  id: number;
+  teacherName: string;
+  subject: string;
+  comment: string;
+  avatarUrl: string;
 }
 
 export interface PortfolioContent {
@@ -42,6 +50,7 @@ export interface PortfolioContent {
     longTerm: string;
   };
   volunteerWork: string;
+  teacherComments: TeacherComment[];
 }
 
 export interface TranslatedData {
@@ -55,13 +64,14 @@ export interface TranslatedData {
 export type Language = 'ar' | 'en';
 
 export interface AppContextType {
-  data: TranslatedData;
+  data: TranslatedData | null;
   // FIX: Use Dispatch and SetStateAction from react instead of React.Dispatch and React.SetStateAction.
-  setData: Dispatch<SetStateAction<TranslatedData>>;
+  setData: Dispatch<SetStateAction<TranslatedData | null>>;
   language: Language;
   setLanguage: (lang: Language) => void;
   t: (key: string) => string;
   isAdmin: boolean;
   login: (password: string) => boolean;
   logout: () => void;
+  isLoading: boolean;
 }

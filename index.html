@@ -1,19 +1,24 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>الاول علئ المدرسه - Portfolio</title>
+    <title>Mohammed Al-Zaydi - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
     <style>
-      @keyframes fall {
-        0% { transform: translateY(-10vh); opacity: 1; }
-        100% { transform: translateY(100vh); opacity: 0.5; }
+      body {
+        background-color: #020617; /* A darker, richer black/blue */
+        background-image: radial-gradient(ellipse 80% 80% at 50% -20%,rgba(120,119,198,0.2),hsla(0,0%,100%,0));
+        font-family: 'Poppins', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
       }
-      .raindrop {
-        animation: fall linear infinite;
+      html[dir="rtl"] body {
+        font-family: 'Tajawal', sans-serif;
       }
     </style>
   <script type="importmap">
@@ -23,12 +28,16 @@
     "react/": "https://aistudiocdn.com/react@^19.2.0/",
     "react": "https://aistudiocdn.com/react@^19.2.0",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.553.0"
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.553.0",
+    "firebase/app": "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js",
+    "firebase/firestore": "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js",
+    "firebase/storage": "https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js",
+    "firebase/": "https://aistudiocdn.com/firebase@^12.6.0/"
   }
 }
 </script>
 </head>
-  <body class="bg-black">
+  <body>
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>
